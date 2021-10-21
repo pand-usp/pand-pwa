@@ -18,9 +18,10 @@
 <script>
 export default {
   props: {
+    id: String,
     name: String,
     description: String,
-    imgPath: String,
+    imgPath: String
   }
 }
 </script>

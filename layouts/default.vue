@@ -81,7 +81,7 @@ export default {
         {
           icon: 'mdi-account-group',
           title: 'Comunidade',
-          to: '/comunidade'
+          to: '/comunidades'
         }
       ],
       miniVariant: false,
