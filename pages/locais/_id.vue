@@ -129,18 +129,12 @@
       </h4></v-card-subtitle
     >
     
-    <v-card elevation="3" color="blocos" @click="goToComunidade">
-      <v-row class="text-center mt-1" justify="center">
-        <v-col cols="1" md="1"></v-col>
-        <v-col cols="2" md="2">
-          <v-img class="rounded-circle pa-7" aspect-ratio="1" src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80"></v-img>
-        </v-col>
-        <v-col cols="9">
-          <v-card-subtitle><span class="secondary--text"><h3>Lugares bonitos em SP</h3></span></v-card-subtitle>        
-        </v-col>
-      </v-row>
-    </v-card>
-
+    <ComunidadeCard 
+      v-for="community in communities"
+      :key="community.id"
+      :name="community.name"
+      :description="community.description"
+    />
   </v-container>
 </template>
 
@@ -148,12 +142,14 @@
 export default {
   async asyncData({ params, query, $axios }) {
     const data = await $axios.$get(`/place/${params.id}`);
+    const communities = await $axios.$get(`/community`);
     return {
       ...data,
       address: query.address,
       name: query.name,
       accessibility: query.accessibility.split(","),
       image: query.image,
+      communities: communities
     };
   },
   methods: {
