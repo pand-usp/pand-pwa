@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app :style="{background: this.$vuetify.theme.themes[theme].background}">
     <v-navigation-drawer
       class="teal lighten-5"
       v-model="drawer"
@@ -82,6 +82,11 @@ export default {
           icon: 'mdi-account-group',
           title: 'Comunidade',
           to: '/comunidade'
+        },
+        {
+          icon: 'mdi-cog-outline',
+          title: 'Configuração',
+          to: '/comunidade'
         }
       ],
       miniVariant: false,
@@ -93,6 +98,11 @@ export default {
   methods: {
     goBack() {
       this.$router.go(-1);
+    }
+  },
+  computed:{
+    theme(){
+      return (this.$vuetify.theme.dark) ? 'dark' : 'light'
     }
   }
 }

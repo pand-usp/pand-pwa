@@ -40,7 +40,8 @@ export default {
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
     '@nuxtjs/google-fonts',
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/color-mode'
   ],
 
   env: {
@@ -79,7 +80,6 @@ export default {
     customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: false,
-      light: true,
       themes: {
         light:{
           primary: "#00E9A3",
@@ -89,14 +89,13 @@ export default {
           
         },
         dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
+          primary: "#7AD8B6",
+          secondary: "#FF3F40",
+          detalhes: "#0D6482",
+          blocos: "#A491A4",
+          background: "#FFFFFF"
         }
+        
       }
     }
   },

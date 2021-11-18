@@ -23,7 +23,7 @@
           large
           rounded
           elevation="4"
-          plain
+          color="blocos"
         >
           Filtro
         </v-btn>

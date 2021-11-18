@@ -8,7 +8,7 @@
 
     <v-row>
       <v-col cols="12" align="center">
-        <p class="mb-0 pb-0"> Qual(is) tipos de acessibilidade você deseja? </p>
+        <p class="mb-0 pb-0 black--text"> Qual(is) tipos de acessibilidade você deseja? </p>
       </v-col>
     </v-row>
 
@@ -32,6 +32,18 @@
     </v-row>
 
     <CommonSearch @search="goToLocais" path="locais"/>
+
+    <v-btn
+          @click="switchColorMode"
+          class="black--text"
+          width="120"
+          large
+          rounded
+          elevation="4"
+          color="blocos"
+        >
+          Daltonismo
+        </v-btn>
     
   </v-container>
 </template>
@@ -52,6 +64,9 @@ export default {
           filters: filters.join(','),
         }
       });
+    },
+    switchColorMode(){
+      this.$vuetify.theme.dark = !(this.$vuetify.theme.dark)
     }
   }
 }
