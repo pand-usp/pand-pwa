@@ -32,18 +32,6 @@
     </v-row>
 
     <CommonSearch @search="goToLocais" path="locais"/>
-
-    <v-btn
-          @click="switchColorMode"
-          class="black--text"
-          width="120"
-          large
-          rounded
-          elevation="4"
-          color="blocos"
-        >
-          Daltonismo
-        </v-btn>
     
   </v-container>
 </template>

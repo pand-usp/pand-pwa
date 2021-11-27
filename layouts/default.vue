@@ -12,16 +12,17 @@
       <v-list>
         <v-list-item
           v-for="(item, i) in items"
+          @click="checkLogout"
           :key="i"
           :to="item.to"
           router
           exact
         >
           <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
+            <v-icon color="black">{{ item.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
+            <v-list-item-title v-text="item.title" class="black--text" />
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -39,6 +40,10 @@
         <v-icon>mdi-{{ `chevron-left` }}</v-icon>
       </v-btn>
       <v-spacer/>
+      <div v-if="showUser" class="secondary rounded-circle bold" style="width:32px;height:32px;justify-content:center;display:flex;"> 
+        <button v-on:click="goToPerfil">F</button>
+        <p class="mt-4 font-weight-bold" style="align-self:center;"></p> 
+      </div>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <!-- n sei se vamos colocar isso aqui -->
       <v-toolbar-title v-text="title" />
@@ -62,12 +67,8 @@ export default {
       clipped: false,
       drawer: false,
       fixed: false,
+      showUser: true,
       items: [
-        {
-          icon: 'mdi-account-circle',
-          title: 'Registrar',
-          to: '/registrar'
-        },
         {
           icon: 'mdi-magnify',
           title: 'Buscar',
@@ -86,7 +87,12 @@ export default {
         {
           icon: 'mdi-cog-outline',
           title: 'Configuração',
-          to: '/comunidade'
+          to: '/settings'
+        },
+        {
+          icon: 'mdi-exit-to-app',
+          title: 'Sair',
+          to: '/'
         }
       ],
       miniVariant: false,
@@ -98,7 +104,23 @@ export default {
   methods: {
     goBack() {
       this.$router.go(-1);
-    }
+    },
+    checkLogout(e) {
+      if (e.target.innerHTML === 'Sair') {
+        this.$data.items.pop()
+        this.$data.items.push({
+          icon: 'mdi-login-variant',
+          title: 'Entrar',
+          to: '/entrar'
+        });
+        this.$data.showUser = false;
+      }
+    },
+    goToPerfil({content, filters}) {
+      this.$router.push({ 
+        path: `/perfil`,
+      });
+    },
   },
   computed:{
     theme(){

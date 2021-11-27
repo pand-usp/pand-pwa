@@ -86,6 +86,7 @@ export default {
           secondary: "#077187",
           detalhes: "#074F57",
           blocos: "#E4C5AF",
+          background: "#FFFFFF"
           
         },
         dark: {

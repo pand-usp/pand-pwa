@@ -1,24 +1,6 @@
 <template>
   <v-container>
-    <v-card class="mx-auto" max-width="300" tile>
-      <v-list dense>
-        <v-card-text class="font-weight-bold title">Atrações</v-card-text>
-        <v-list-item-group v-model="selectedItem" color="secondary">
-          <v-list-item two-line>
-            <v-list-item-content>
-              <v-list-item-title class="h3">Pulp Fiction - Descrição de Áudio</v-list-item-title>
-              <v-list-item-subtitle>R$20,00</v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item two-line>
-            <v-list-item-content>
-              <v-list-item-title>A outra Face - Descrição de Áudio</v-list-item-title>
-              <v-list-item-subtitle>R$28,00</v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-card>
+    
 
     <v-row class="text-center mt-1 ml-2">
         <div
