@@ -10,8 +10,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - projeto-hackssi',
-    title: 'projeto-hackssi',
+    titleTemplate: '%s - PAND',
+    title: 'PAND',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
