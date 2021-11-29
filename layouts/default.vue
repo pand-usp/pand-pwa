@@ -93,6 +93,11 @@ export default {
           icon: 'mdi-exit-to-app',
           title: 'Sair',
           to: '/'
+        },
+        {
+          icon: 'mdi-plus-circle',
+          title: 'Adicionar local',
+          to: '/addLocal'
         }
       ],
       miniVariant: false,
