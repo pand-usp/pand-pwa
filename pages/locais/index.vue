@@ -24,9 +24,16 @@ export default {
   },
   async asyncData({ $axios, query }) {
     await setTimeout(() => {}, 200)
+
+    if (query && Object.keys(query).length === 0) {
+      query = {
+        q: '',
+        filters: '',
+      }
+    }
+
     const filters = query.filters.split(',').filter(e => e);
     // console.log(filters)
-
     const response = await $axios.$get('/place', {
       params: {
         q: query.q,
