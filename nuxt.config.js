@@ -40,8 +40,7 @@ export default {
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
     '@nuxtjs/google-fonts',
-    '@nuxtjs/dotenv',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/dotenv'
   ],
 
   env: {
