@@ -19,19 +19,29 @@ export default {
   data() {
     return {
       locais: [],
+      filters: [],
     }
   },
   async asyncData({ $axios, query }) {
     await setTimeout(() => {}, 200)
+    const filters = query.filters.split(',').filter(e => e);
+    // console.log(filters)
+
     const response = await $axios.$get('/place', {
       params: {
         q: query.q,
         filters: query.filters
       }
     });
+    // console.log({response})
 
     return {
-      locais: response,
+      locais: response.filter(local => {
+        return filters.reduce((result, e) => {
+          console.log(local, result && local.accessibility[e])
+          return result && local.accessibility[e];
+        }, true)
+      })
     }
   },
   methods: {
@@ -43,7 +53,6 @@ export default {
         }
       });
       this.locais = response;
-
     },
     goTo(local) {
       this.$router.push({ 

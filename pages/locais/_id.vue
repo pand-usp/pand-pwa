@@ -223,7 +223,7 @@ export default {
   },
   methods: {
     goToMapa() {
-      console.log(this.address);
+      // console.log(this.address);
       this.$router.push({
         path: "/mapa",
         params: {
@@ -249,7 +249,7 @@ export default {
       this.$router.push('/grupo')
     },
     sendMessage(){
-      console.log("AAAAAAAAAAAAAAAAAAAAAA")
+      // console.log("AAAAAAAAAAAAAAAAAAAAAA")
       this.$data.comments.unshift({
         text:this.$data.comment,
         author:"Fátima",
