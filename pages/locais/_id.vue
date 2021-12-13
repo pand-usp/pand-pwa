@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-card class="ma-4" light elevation="0">
     <v-row align="center" justify="space-around" class="pt-8">
       <v-col cols="12" sm="8" md="6" align-items="center">
         <v-card-text light class="title font-weight-bold pt-0 black--text"
@@ -185,7 +185,7 @@
       </v-row>
     </v-card>
 
-  </v-container>
+  </v-card>
 </template>
 
 <script>
@@ -193,21 +193,7 @@ export default {
   data: () => ({
       comment: "",
       comments: [
-        {
-          author: 'Fulano',
-          text: `Lugar acessível para pessoas com deficiencia física :)`,
-          condition: ['Fisica'],
-        },
-        {
-          author: 'Maria',
-          text: `Lugar divertido, ótima pizza`,
-          condition: ['Visual'],
-        },
-        {
-          author: 'Roberto',
-          text: `Lugar acessível top`,
-          condition: ['Visual'],
-        },
+        
       ],
     }),
 
@@ -217,7 +203,7 @@ export default {
       ...data,
       address: query.address,
       name: query.name,
-      accessibility: query.accessibility.split(","),
+      accessibility: (query.accessibility || "").split(",").filter(e => e),
       image: query.image,
     };
   },

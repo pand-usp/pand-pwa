@@ -59,7 +59,12 @@ export default {
           filters,
         }
       });
-      this.locais = response;
+      this.locais = response.filter(local => {
+        return (filters || []).reduce((result, e) => {
+          console.log(local, result && local.accessibility[e])
+          return result && local.accessibility[e];
+        }, true)
+      });
     },
     goTo(local) {
       this.$router.push({ 

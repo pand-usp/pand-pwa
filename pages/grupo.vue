@@ -32,7 +32,7 @@ export default {
       themes: [
       {
         title: "Sugestões de lugares para assistir filmes",
-        availableAccessibility: ["fisica"]
+        availableAccessibility: ["visual", "auditiva"]
       },
       {
         title: "Alguem quer fazer um rolê?",

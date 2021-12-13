@@ -28,8 +28,9 @@
               ></v-text-field>
             </v-row>
 
-            <v-btn
-                class="text-xs-center black--text" 
+            <div style="display:flex " class="mt-4">
+              <v-btn
+                class="mr-4 text-xs-center black--text" 
                 color="primary"
                 elevation="2"
                 nuxt
@@ -37,9 +38,24 @@
                 to="/locais"
               >
               Entrar
-              </v-btn>
+            </v-btn>
+
+            <v-btn
+                class="text-xs-center white--text" 
+                color="secondary"
+                elevation="2"
+                nuxt
+                large
+                to="/registrar"
+              >
+              Registrar
+            </v-btn>
+            </div>
+
+            
 
           </v-card-actions>
+
         </v-card>
           <!-- fazer uma gambiarra p deixar bonito só, ja q n vamos usar -->
 

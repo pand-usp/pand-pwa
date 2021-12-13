@@ -116,11 +116,13 @@ export default {
             visual : this.$data.ratingVisual, 
           },
         accessibility : { 
-            auditiva : true, 
-            fisica : true, 
-            visual : true 
+            auditiva : this.$data.ratingAuditiva > 0 ? true : false, 
+            fisica : this.$data.ratingFisica > 0 ? true : false,
+            visual : this.$data.ratingVisual > 0 ? true : false,
           }
       });
+
+      console.log(this.$data.ratingAuditiva)
 
       this.$router.push({ 
         path: `locais/`,

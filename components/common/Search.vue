@@ -37,18 +37,7 @@
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-col cols="5" align="center">
-        <v-btn
-          class="black--text font-weight-bold"
-          width="120"
-          large
-          rounded
-          elevation="4"
-          color="blocos"
-        >
-          Filtro
-        </v-btn>
-      </v-col>
+      
       <v-col cols="5" align="center">
         <v-btn
           class="black--text"

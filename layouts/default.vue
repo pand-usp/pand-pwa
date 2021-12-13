@@ -41,7 +41,7 @@
       </v-btn>
       <v-spacer/>
       <div v-if="showUser" class="secondary rounded-circle bold" style="width:32px;height:32px;justify-content:center;display:flex;"> 
-        <button v-on:click="goToPerfil">F</button>
+        <button v-on:click="goToPerfil">I</button>
         <p class="mt-4 font-weight-bold" style="align-self:center;"></p> 
       </div>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
@@ -90,15 +90,16 @@ export default {
           to: '/settings'
         },
         {
+          icon: 'mdi-plus-circle',
+          title: 'Adicionar local',
+          to: '/addLocal'
+        },
+        {
           icon: 'mdi-exit-to-app',
           title: 'Sair',
           to: '/'
         },
-        {
-          icon: 'mdi-plus-circle',
-          title: 'Adicionar local',
-          to: '/addLocal'
-        }
+        
       ],
       miniVariant: false,
       right: true,

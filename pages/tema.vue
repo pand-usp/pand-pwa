@@ -20,7 +20,7 @@
     <v-card class="rounded-xl pb-2 px-2" color="#FFECD1" v-for="reply in replies" :key="reply.text">
       <v-card-title>{{ reply.author }}</v-card-title>
       <v-card-text>{{ reply.text }}</v-card-text>
-      <v-card v-on:click="$router.push('/locais/1')" class="rounded-xl" elevation="0" color="blocos">
+      <v-card v-on:click="$router.push('/locais/61a6cb5f553ff66bf144f853?address=Av.%20Magalhães%20de%20Castro,%2012.000%20-%20Cidade%20Jardim,%20São%20Paulo%20-%20SP,%2005502-001&image=https%3A%2F%2Feditorial.cjfashion.com%2Fwp-content%2Fuploads%2F2020%2F07%2Fshopping-01.jpg&accessibility=auditiva,visual&name=Shopping%20Cidade%20Jardim')" class="rounded-xl" elevation="0" color="blocos">
         <v-row class="my-2 pa-0 align-center">
         <v-col class="pa-0" cols="4">
           <v-img width="60" class="ml-4 my-1 pa-0 rounded-circle align-self-center" aspect-ratio="1"
@@ -28,7 +28,7 @@
           />
         </v-col>
         <v-col class="pa-0" cols="8">
-          <v-card-subtitle class="my-0 pa-0 font-weight-bold">Cinema Tal</v-card-subtitle>
+          <v-card-subtitle class="my-0 pa-0 font-weight-bold">Shopping Cidade Jardim</v-card-subtitle>
         </v-col>
       </v-row>
       </v-card>
