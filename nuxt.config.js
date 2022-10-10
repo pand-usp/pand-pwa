@@ -10,8 +10,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - PAND',
-    title: 'PAND',
+    titleTemplate: '%s - ANTA',
+    title: 'ANTA',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -81,7 +81,7 @@ export default {
       dark: false,
       themes: {
         light:{
-          primary: "#00E9A3",
+          primary: "#ff5757",
           secondary: "#077187",
           detalhes: "#074F57",
           blocos: "#E4C5AF",

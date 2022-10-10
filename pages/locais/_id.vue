@@ -35,7 +35,7 @@
 
         <v-card-title
           ><span class="secondary--text p-0 black--text"
-            ><h3>Avaliações e Comentários</h3></span
+            ><h3>Avaliações</h3></span
           ></v-card-title
         >
 
@@ -58,7 +58,7 @@
             <div class="d-flex my-2"
               v-if="accessibility.includes('fisica')"
             >
-              <v-icon color="secondary">mdi-wheelchair-accessibility</v-icon>
+              <v-icon color="secondary">mdi-barley</v-icon>
               <v-rating
                 color="primary"
                 hover
@@ -72,7 +72,7 @@
             <div class="d-flex my-2"
               v-if="accessibility.includes('visual')"
             >
-              <v-icon color="secondary">mdi-eye-off</v-icon>
+              <v-icon color="secondary">mdi-peanut</v-icon>
               <v-rating
                 color="primary"
                 hover
@@ -86,7 +86,7 @@
             <div class="d-flex my-2" 
               v-if="accessibility.includes('auditiva')"
             >
-              <v-icon color="secondary">mdi-ear-hearing-off</v-icon>
+              <v-icon color="secondary">mdi-bottle-wine</v-icon>
               <v-rating
                 color="primary"
                 hover
@@ -100,7 +100,16 @@
           </v-col>
         </v-row>
 
+
+        <v-card-title
+          ><span class="secondary--text p-0 black--text"
+            ><h3>Comentários</h3></span
+          ></v-card-title
+        >
+
         <v-divider class="mx-4"></v-divider>
+
+        <!-- 
 
         <div class="pb-4">
           <br/>
@@ -147,6 +156,7 @@
             </div>
           </v-card>
         </div>
+         -->
 
         <div v-for="comment in comments" :key="comment.text">
           <v-card elevation="3" color="blocos">
@@ -156,13 +166,15 @@
               </span></v-card-subtitle
             >
             <v-card-text class="black--text">{{
-              "Deficiência " + comment.condition
+              "Alergia a " + comment.condition
             }}</v-card-text>
             <v-card-text>{{ comment.text }}</v-card-text> </v-card
           ><br />
         </div>
       </v-col>
     </v-row>
+
+    <!-- 
 
     <v-card-title
       ><span class="black--text"><h2>Comunidades</h2></span></v-card-title
@@ -172,6 +184,8 @@
         Este lugar foi muito citado nas seguintes comunidades:
       </h4></v-card-subtitle
     >
+
+  
     
     <v-card elevation="3" color="blocos" @click="goToComunidade">
       <v-row class="text-center mt-1" justify="center">
@@ -185,7 +199,11 @@
       </v-row>
     </v-card>
 
+    -->
+
   </v-card>
+
+
 </template>
 
 <script>
