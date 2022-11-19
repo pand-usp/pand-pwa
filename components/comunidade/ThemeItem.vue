@@ -7,9 +7,9 @@
         :key="item"
         class="pa-5 my-2 mx-1 secondary rounded-circle d-inline-block"
       >
-        <v-icon color="white" v-if="item === 'fisica'">mdi-wheelchair-accessibility</v-icon>
-        <v-icon color="white" v-if="item === 'visual'">mdi-eye-off</v-icon>
-        <v-icon color="white" v-if="item === 'auditiva'">mdi-ear-hearing-off</v-icon>
+        <v-icon color="white" v-if="item === 'fisica'">mdi-barley</v-icon>
+        <v-icon color="white" v-if="item === 'visual'">mdi-peanut</v-icon>
+        <v-icon color="white" v-if="item === 'auditiva'">mdi-bottle-wine</v-icon>
       </div>
     </v-row>
   </v-card>

@@ -79,20 +79,29 @@ export default {
           title: 'Locais',
           to: '/locais'
         },
+        /*
         {
           icon: 'mdi-account-group',
           title: 'Comunidade',
           to: '/comunidade'
         },
+        
         {
           icon: 'mdi-cog-outline',
           title: 'Configuração',
           to: '/settings'
         },
+        
         {
           icon: 'mdi-plus-circle',
           title: 'Adicionar local',
           to: '/addLocal'
+        },
+        */
+        {
+          icon: 'mdi-exit-to-app',
+          title: 'Sair',
+          to: '/'
         },
         
       ],

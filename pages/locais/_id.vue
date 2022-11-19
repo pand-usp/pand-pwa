@@ -40,7 +40,7 @@
         >
 
         <v-row no-gutters class="mb-5">
-          <v-col cols="6">
+          <v-col cols="4">
             <div class="d-flex flex-column align-center justify-center black--text">
               <h1> {{ getRatingAvg() }}</h1>
               <v-rating
@@ -58,7 +58,7 @@
             <div class="d-flex my-2"
               v-if="accessibility.includes('fisica')"
             >
-              <v-icon color="secondary">mdi-barley</v-icon>
+              <v-text align="center">Livre Contaminação</v-text>
               <v-rating
                 color="primary"
                 hover
@@ -72,7 +72,7 @@
             <div class="d-flex my-2"
               v-if="accessibility.includes('visual')"
             >
-              <v-icon color="secondary">mdi-peanut</v-icon>
+              <v-text>Atendimento</v-text>
               <v-rating
                 color="primary"
                 hover
@@ -86,7 +86,7 @@
             <div class="d-flex my-2" 
               v-if="accessibility.includes('auditiva')"
             >
-              <v-icon color="secondary">mdi-bottle-wine</v-icon>
+              <v-text>Sabor</v-text>
               <v-rating
                 color="primary"
                 hover
@@ -108,9 +108,6 @@
         >
 
         <v-divider class="mx-4"></v-divider>
-
-        <!-- 
-
         <div class="pb-4">
           <br/>
             <v-card class="pa-2" elevation="0" align="center">
@@ -125,7 +122,7 @@
               ></v-text-field>
     
             <div class="d-flex my-2">
-              <v-icon color="secondary">mdi-wheelchair-accessibility</v-icon>
+              <v-text align="center">Livre Contaminação</v-text>
               <v-rating
                 align="center"
                 v-model="rating2"
@@ -135,7 +132,7 @@
               ></v-rating>
             </div>
             <div class="d-flex my-2">
-              <v-icon color="secondary">mdi-eye-off</v-icon>
+              <v-text align="center">Atendimento</v-text>
               <v-rating
                 align="center"
                 v-model="rating2"
@@ -145,7 +142,7 @@
               ></v-rating>
             </div>
             <div class="d-flex my-2">
-              <v-icon color="secondary">mdi-ear-hearing-off</v-icon>
+              <v-text align="center">Sabor</v-text>
               <v-rating
                 align="center"
                 v-model="rating2"
@@ -156,8 +153,6 @@
             </div>
           </v-card>
         </div>
-         -->
-
         <div v-for="comment in comments" :key="comment.text">
           <v-card elevation="3" color="blocos">
             <v-card-subtitle
@@ -256,8 +251,8 @@ export default {
       // console.log("AAAAAAAAAAAAAAAAAAAAAA")
       this.$data.comments.unshift({
         text:this.$data.comment,
-        author:"Fátima",
-        condition: ['Visual'],
+        author:"Stefany",
+        condition: ['Glútem'],
       })
     }
   },
