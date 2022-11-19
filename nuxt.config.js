@@ -45,6 +45,7 @@ export default {
 
   env: {
     apiKey: process.env.API_KEY,
+    serverLink:process.env.SERVER,
   },
 
   googleFonts: {
@@ -64,7 +65,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: 'http://localhost:3000',
+    baseURL: `https://34c5312f08a421.lhr.life/`,
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
